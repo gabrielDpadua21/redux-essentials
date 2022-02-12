@@ -2,15 +2,7 @@ import './Intervalo.css';
 import React from 'react';
 import Card from './Card';
 
-interface IProps {
-    min: number;
-    max: number;
-    onMinChange?: any;
-    onMaxChange?: any;
-}
-
-
-const Intervalo = (props: IProps) => {
+const Intervalo = (props: any) => {
 
     const {min, max} = props;
 
@@ -23,8 +15,8 @@ const Intervalo = (props: IProps) => {
                     </strong>
                     <input 
                         type="number" 
-                        value={min}
-                        onChange={e => props.onMinChange(+e.target.value)} 
+                        value={1}
+                        readOnly 
                     />
                 </span>
                 <span>
@@ -33,8 +25,8 @@ const Intervalo = (props: IProps) => {
                     </strong>
                     <input 
                         type="number" 
-                        value={max}
-                        onChange={e => props.onMaxChange(+e.target.value)} 
+                        value={10}
+                        readOnly 
                     />
                 </span>
             </div>

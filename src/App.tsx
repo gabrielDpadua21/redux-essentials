@@ -6,23 +6,16 @@ import Media from './components/Media';
 import Sorteio from './components/Sorteio';
 
 function App() {
-
-  const [min, setMin] = useState<number>(10);
-  const [max, setMax] = useState<number>(100);
-
   return (
     <div className="App">
        <h1>Redux essentials</h1>
        <div className="line">
-         <Intervalo 
-            min={min} max={max}
-            onMinChange={setMin} onMaxChange={setMax} 
-          />
+         <Intervalo />
        </div>
        <div className="line">
-          <Soma min={min} max={max} />
-          <Media min={min} max={max} />
-          <Sorteio min={min} max={max} />
+          <Soma />
+          <Media />
+          <Sorteio />
        </div>
     </div>
   );
