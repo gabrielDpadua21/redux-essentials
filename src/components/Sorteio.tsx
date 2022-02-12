@@ -1,7 +1,16 @@
 import React from 'react';
 import Card from './Card';
 
-const Sorteio = () => {
+interface IProps {
+    min: number;
+    max: number;
+}
+
+const Sorteio = (props: IProps) => {
+
+    const {min, max} = props;
+    const aleatory = (Math.random() * (max - min)) + min;
+    
     return (
         <Card title="Sorteio de numeros" color='purple'>
             <div>
@@ -10,7 +19,7 @@ const Sorteio = () => {
                         Resultado:
                     </span>
                     <strong>
-                        5
+                        {parseInt(aleatory.toString())}
                     </strong>
                 </span>
             </div>

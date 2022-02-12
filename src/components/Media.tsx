@@ -1,7 +1,16 @@
 import React from 'react';
 import Card from './Card';
 
-const Media = () => {
+
+interface IProps {
+    min: number;
+    max: number;
+}
+
+const Media = (props: IProps) => {
+
+    const {min, max} = props;
+
     return (
         <Card title="Média dos numeros" color='green'>
             <div>
@@ -10,7 +19,7 @@ const Media = () => {
                         Resultado:
                     </span>
                     <strong>
-                        5
+                        {(min + max) / 2}
                     </strong>
                 </span>
             </div>

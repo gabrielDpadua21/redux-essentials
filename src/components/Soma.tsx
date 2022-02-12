@@ -1,7 +1,15 @@
 import React from 'react';
 import Card from './Card';
 
-const Soma = () => {
+interface IProps {
+    min: number;
+    max: number;
+}
+
+const Soma = (props: IProps) => {
+
+    const {min, max} = props;
+
     return (
         <Card title="Soma dos numeros" color='blue'>
             <div>
@@ -10,7 +18,7 @@ const Soma = () => {
                         Resultado:
                     </span>
                     <strong>
-                        10
+                        {min + max}
                     </strong>
                 </span>
             </div>
