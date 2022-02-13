@@ -5,8 +5,8 @@ const reducers = combineReducers({
         console.log('state: ', state);
         console.log('action: ', action);
         return {
-            min: 1,
-            max: 10
+            min: 7,
+            max: 31
         }
     }
 });

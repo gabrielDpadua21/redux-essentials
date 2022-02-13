@@ -1,10 +1,11 @@
 import './Intervalo.css';
 import React from 'react';
 import Card from './Card';
+import { connect } from 'react-redux';
 
 const Intervalo = (props: any) => {
 
-    const {min, max} = props;
+    const {min, max} = props.numbers;
 
     return (
         <Card title="Intervalor de numeros">
@@ -15,7 +16,7 @@ const Intervalo = (props: any) => {
                     </strong>
                     <input 
                         type="number" 
-                        value={1}
+                        value={min}
                         readOnly 
                     />
                 </span>
@@ -25,7 +26,7 @@ const Intervalo = (props: any) => {
                     </strong>
                     <input 
                         type="number" 
-                        value={10}
+                        value={max}
                         readOnly 
                     />
                 </span>
@@ -34,4 +35,10 @@ const Intervalo = (props: any) => {
     )
 }
 
-export default Intervalo;
+const mapStateToProps = (state: any) => {
+    return {
+        numbers: state.numbers
+    }
+}
+
+export default connect(mapStateToProps)(Intervalo);
