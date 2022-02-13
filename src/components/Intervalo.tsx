@@ -4,9 +4,7 @@ import Card from './Card';
 import { connect } from 'react-redux';
 
 const Intervalo = (props: any) => {
-
     const {min, max} = props.numbers;
-
     return (
         <Card title="Intervalor de numeros">
             <div className='intervalo'>
